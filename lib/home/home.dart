@@ -1,8 +1,10 @@
 library home;
 
+// Video player library does not support sound null safety, so the --no-sound-null-safety flag must be used at compiletime
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+// This class requires onTap function from Page class, because a button will redirect to another page
 class HomePage extends StatefulWidget {
   final Function(int i) rel;
   HomePage({required this.rel});
@@ -12,11 +14,14 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  // Creating a video player controller
   VideoPlayerController _controller = VideoPlayerController.asset('');
 
   @override
   void initState() {
     super.initState();
+    // Setting the video to fire_edges.mp4
+    // After initialization it will play the video and set it to looping
     _controller = VideoPlayerController.asset('assets/videos/fire_edges.mp4')
       ..initialize().then((_) {
         _controller.play();
@@ -48,7 +53,7 @@ class HomePageState extends State<HomePage> {
                   style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'Blazed',
-                    fontSize: 50,
+                    fontSize: 30,
                   ),
                   textAlign: TextAlign.center,
                 ),

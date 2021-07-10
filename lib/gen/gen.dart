@@ -85,15 +85,15 @@ class _GenState extends State<Gen> {
                         random(),
                         style: TextStyle(
                           color: Color(0xFFFF4A1C),
-                          fontSize: 50,
-                          fontFamily: 'Blazed',
+                          fontSize: 10,
+                          fontFamily: 'HotFont',
                         ),
                         textAlign: TextAlign.center,
                       ),
                       padding: EdgeInsets.all(100),
                     ),
                     Center(
-                      child: Row(
+                      child: ListView(
                         children: <Widget>[
                           Expanded(
                             flex: 1,
@@ -121,7 +121,7 @@ class _GenState extends State<Gen> {
                                 'Witty',
                                 style: TextStyle(
                                   color: Colors.red,
-                                  fontSize: 30,
+                                  fontSize: 10,
                                   fontFamily: 'HotFont',
                                 ),
                               ),
@@ -140,7 +140,7 @@ class _GenState extends State<Gen> {
                                 'Amazing',
                                 style: TextStyle(
                                   color: Colors.red,
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   fontFamily: 'HotFont',
                                 ),
                               ),
@@ -159,7 +159,7 @@ class _GenState extends State<Gen> {
                                 'EPIC!',
                                 style: TextStyle(
                                   color: Colors.red,
-                                  fontSize: 30,
+                                  fontSize: 5,
                                   fontFamily: 'HotFont',
                                 ),
                               ),
